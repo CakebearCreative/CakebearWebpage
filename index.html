@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Enthusiast Hub</title>
+    <title>Cakebear AI</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Banner -->
+    <div class="banner">
+        <h1>Welcome to Cakebear AI Enthusiast Hub</h1>
+    </div>
     <div class="container">
         <nav>
             <ul>
@@ -17,27 +21,52 @@
             </ul>
         </nav>
         <section id="chatgpt-prompts">
+            <h2>ChatGPT Prompts</h2>
             <a href="https://github.com/CakebearCreative">Visit my GitHub</a>
-            <ul>
-                <li><a href="#prompt1">Prompt1</a></li>
-                <li><a href="#prompt2">Prompt2</a></li>
-                <li><a href="#prompt3">Prompt3</a></li>
-            </ul>
-            <div id="prompt1">Content for Prompt1...</div>
-            <div id="prompt2">Content for Prompt2...</div>
-            <div id="prompt3">Content for Prompt3...</div>
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#" onclick="loadContent('prompt1.txt')">Prompt1</a></li>
+                    <li><a href="#" onclick="loadContent('prompt2.txt')">Prompt2</a></li>
+                    <li><a href="#" onclick="loadContent('prompt3.txt')">Prompt3</a></li>
+                    <!-- More prompts -->
+                </ul>
+            </div>
+            <div class="main-content" id="content-area">
+                <!-- Content will be loaded here -->
+            </div>
         </section>
         <section id="gpts">
+            <h2>GPTs</h2>
             <a href="#placeholder-link">Placeholder Link</a>
-            <div class="grid">
-                <!-- Add grid items with icons and links -->
+            <div class="grid-container">
+                <!-- Grid Item 1 -->
+                <div class="grid-item">
+                    <a href="#link1">
+                        <img src="images/icon1.jpg" alt="Icon 1"> <!-- Replace with actual image path -->
+                        <p class="icon-description">Short description of Icon 1</p>
+                    </a>
+                    <!--<a href="#link1">Link 1</a>-->
+                </div>
+        
+                <!-- Grid Item 2 -->
+                <div class="grid-item">
+                    <a href="#link2">
+                        <img src="images/icon2.jpg" alt="Icon 2"> <!-- Replace with actual image path -->
+                        <p class="icon-description">Short description of Icon 2</p>
+                    </a>
+                    <!--a href="#link2">Link 2</a-->
+                </div>
+        
+                <!-- More grid items can be added in the same pattern -->
             </div>
         </section>
         <section id="youtube">
+            <h2>Youtube</h2>
             <a href="#youtube-link">Visit my Youtube Page</a>
             <!-- Embed Youtube content -->
         </section>
         <section id="guides">
+            <h2>Guides</h2>
             <ul>
                 <li><a href="#guide1">Guide1</a></li>
                 <li><a href="#guide2">Guide2</a></li>
@@ -49,5 +78,6 @@
         </section>
     </div>
     <script src="script.js"></script>
+    <script src="fetchtxt.js"></script>
 </body>
 </html>
