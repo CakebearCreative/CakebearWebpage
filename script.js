@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetSection = document.querySelector(e.target.getAttribute('href'));
             sections.forEach(section => section.style.display = 'none');
-            targetSection.style.display = 'block';
+            targetSection.style.display = 'flex';
         });
     });
 });
