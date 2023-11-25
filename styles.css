@@ -88,12 +88,19 @@ section {
 }
 
 
-
+/* Specific flex layout for ChatGPT Prompts section */
 #chatgpt-prompts {
     display: flex;
     flex-direction: row; /* Align children in a row */
     width: 100%; /* Take full width of the container */
 }
+
+/* Default block layout for other sections */
+#youtube, #gpts, #guides {
+    display: block;
+    /* ... other styles ... */
+}
+
 
 .sidebar {
     flex: 0 0 250px; /* Don't grow, don't shrink, start at 250px width */
