@@ -3,6 +3,8 @@ body {
     background-color: #121212;
     color: #fff;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -11,10 +13,22 @@ body {
     padding: 20px;
 }
 
+nav {
+    background-color: #1c1c1c; /* Slightly lighter dark for contrast */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
 nav ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
 nav a {
@@ -25,6 +39,111 @@ nav a {
 }
 
 section {
-    margin-top: 20px;
+    display: none; /* Initially hide sections */
+    padding: 20px 0;
 }
 
+.banner {
+    background-image: url('images/banner.jpg'); /* Relative path to the banner image */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.banner h1 {
+    color: #ffffff;
+    font-size: 40px;
+    margin: 0;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items in one row */
+    gap: 20px; /* Space between grid items */
+}
+
+.grid-item {
+    text-align: center;
+    padding: 10px; /* Add padding for spacing */
+}
+
+.grid-item img {
+    width: 100%; /* Make image take full width of the grid item */
+    max-width: 150px; /* Limiting the maximum width */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.icon-description {
+    margin-bottom: 5px; /* Space between description and link */
+    color: #ffffff; /* Set the color for visibility in dark mode */
+}
+
+.grid-item a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block; /* For center alignment */
+}
+
+
+
+
+.sidebar {
+    width: 250px; /* Adjust width as needed */
+    background-color: #2a2a2a;
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Scrollable */
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto; /* Scrollable */
+}
+
+.prompt-detail {
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .banner h1 {
+        font-size: 30px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
+    }
+
+    .grid-item img {
+        max-width: 100px; /* Smaller icons on smaller screens */
+    }
+
+    /* Other responsive adjustments */
+}
+
+/* Additional styling for buttons, links, etc. */
