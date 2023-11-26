@@ -70,6 +70,13 @@ section {
 }
 
 
+
+.container.gpts a {
+    color: aqua;
+    margin-bottom: 10px;
+}
+
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 items in one row */
@@ -85,12 +92,19 @@ section {
     width: 100%; /* Make image take full width of the grid item */
     max-width: 150px; /* Limiting the maximum width */
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .icon-description {
-    margin-bottom: 5px; /* Space between description and link */
+    margin-bottom: 1px; /* Space between description and link */
     color: #ffffff; /* Set the color for visibility in dark mode */
+    font-weight: bold;
+}
+
+.gpt-icon-text {
+    margin-bottom: 1px; /* Space between description and link */
+    color: #adadad; /* Set the color for visibility in dark mode */
+    font-style: italic;
 }
 
 .grid-item a {
@@ -112,6 +126,17 @@ section {
     display: block;
     /* ... other styles ... */
 }
+
+.header-section-desc {
+    color:#dcdcdc;
+    font-size:small;
+}
+
+.gpts-store-link {
+    color: #3697ff;
+    margin-bottom:20px;
+}
+
 
 
 .sidebar {
@@ -151,7 +176,6 @@ section {
 
 
 .homepage-container .home-section {
-    height: 33vh; /* One-third of the viewport height */
     overflow-y: auto; /* Enables vertical scrolling */
     padding: 15px;
 }
@@ -177,7 +201,7 @@ section {
 
 #gpts-home {
     display: flex;
-    height: 22vh;
+    min-height: 22vh;
     flex-wrap: wrap;
     justify-content: space-around; /* This will space out your items evenly */
 }
@@ -197,6 +221,7 @@ section {
     background-position: center;
     padding: 20px;
     text-align: center;
+    min-height: auto;
 }
 
 #background-info img {
@@ -223,6 +248,7 @@ section {
 .youtube-video {
     text-align: center; /* Center the video */
     margin: 20px 0; /* Add some margin around the video */
+    margin-bottom: 30px;
 }
 
 
@@ -281,6 +307,7 @@ section {
 
     .grid-container {
         grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
+        grid-row-gap: 20px; /* Add space between rows */
     }
 
     .grid-item img {
@@ -291,6 +318,8 @@ section {
         height: auto; /* Adjust height for smaller screens */
         overflow-y: visible; /* Consider changing overflow behavior on small screens */
     }
+
+    
 
     /* Other responsive adjustments */
 }
