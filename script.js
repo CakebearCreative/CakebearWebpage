@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Show the homepage section by default
     homepageSection.style.display = 'block'; // Or 'flex' if that's more appropriate
+    document.querySelector('nav a[href="#homepage"]').classList.add('active-nav-link');
 
 
     navLinks.forEach(link => {
@@ -22,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
             sections.forEach(section => {
                 section.style.display = 'none'; // Hide all sections
             });
+            navLinks.forEach(navLink => {
+                navLink.classList.remove('active-nav-link'); // Remove active class from all nav links
+            });
 
             // Set display based on a class or other identifier
             if (targetId === 'chatgpt-prompts') {
@@ -29,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 targetSection.style.display = 'block';
             }
+            e.target.classList.add('active-nav-link'); // Add active class to the clicked nav link
         });
     });
 });
