@@ -1,4 +1,4 @@
-function loadContent(fileName) {
+function loadContent(fileName, targetId) {
     // Path to the directory containing the .txt files
     const baseDir = 'prompts/';
 
@@ -9,7 +9,7 @@ function loadContent(fileName) {
     fetch(filePath)
         .then(response => response.text())
         .then(data => {
-            document.getElementById('content-area').textContent = data;
+            document.getElementById(targetId).textContent = data;
         })
         .catch(error => console.error('Error loading content:', error));
 }
