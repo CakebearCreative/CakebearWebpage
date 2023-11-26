@@ -1,7 +1,17 @@
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('.container > section, .homepage-container');
     const navLinks = document.querySelectorAll('nav a');
+    const homepageSection = document.getElementById('homepage');
+
+    // Hide all sections initially
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Show the homepage section by default
+    homepageSection.style.display = 'block'; // Or 'flex' if that's more appropriate
+
 
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
