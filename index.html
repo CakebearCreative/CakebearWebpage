@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta http-equiv='cache-control' content='no-cache'> 
-<meta http-equiv='expires' content='0'> 
-<meta http-equiv='pragma' content='no-cache'>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +14,7 @@
     <div class="container">
         <nav>
             <ul>
+                <li><a href="#homepage">Homepage</a></li>
                 <li><a href="#chatgpt-prompts">ChatGPT Prompts</a></li>
                 <li><a href="#gpts">GPTs</a></li>
                 <li><a href="#youtube">Youtube</a></li>
@@ -28,9 +26,9 @@
                 <h2>ChatGPT Prompts</h2>
                 <a href="https://github.com/CakebearCreative">Visit my GitHub</a>
                 <ul>
-                    <li><a href="#" onclick="loadContent('Midjourney_ChatGPT_Instructions.txt')">Prompt1</a></li>
-                    <li><a href="#" onclick="loadContent('Dall-E_ChatGPT_AntiCensorPrompt.txt')">Prompt2</a></li>
-                    <li><a href="#" onclick="loadContent('prompt3.txt')">Prompt3</a></li>
+                    <li><a href="#" onclick="loadContent('Midjourney_ChatGPT_Instructions.txt')">Midjourney Instructions</a></li>
+                    <li><a href="#" onclick="loadContent('Dall-E_ChatGPT_AntiCensorPrompt.txt')">Dall-E AntiCensorPrompt</a></li>
+                    <li><a href="#" onclick="loadContent('prompt3.txt')">Test Prompt</a></li>
                     <!-- More prompts -->
                 </ul>
             </div>
@@ -45,8 +43,8 @@
                 <!-- Grid Item 1 -->
                 <div class="grid-item">
                     <a href="#link1">
-                        <img src="images/icon1.jpg" alt="Icon 1"> <!-- Replace with actual image path -->
-                        <p class="icon-description">Short description of Icon 1</p>
+                        <img src="images/Icon_MidjourneyGPT.png" alt="Icon 1"> <!-- Replace with actual image path -->
+                        <p class="icon-description">MidjourneyGPT</p>
                     </a>
                     <!--<a href="#link1">Link 1</a>-->
                 </div>
@@ -54,8 +52,17 @@
                 <!-- Grid Item 2 -->
                 <div class="grid-item">
                     <a href="#link2">
-                        <img src="images/icon2.jpg" alt="Icon 2"> <!-- Replace with actual image path -->
-                        <p class="icon-description">Short description of Icon 2</p>
+                        <img src="images/Icon_WebpageDeveloper.png" alt="Icon 2"> <!-- Replace with actual image path -->
+                        <p class="icon-description">WebpageDeveloper</p>
+                    </a>
+                    <!--a href="#link2">Link 2</a-->
+                </div>
+
+                <!-- Grid Item 2 -->
+                <div class="grid-item">
+                    <a href="#link3">
+                        <img src="images/Icon_DavinciResolveAssistant.png" alt="Icon 3"> <!-- Replace with actual image path -->
+                        <p class="icon-description">DavinciResolve Assistant</p>
                     </a>
                     <!--a href="#link2">Link 2</a-->
                 </div>
@@ -66,6 +73,9 @@
         <section id="youtube">
             <h2>Youtube</h2>
             <a href="#youtube-link">Visit my Youtube Page</a>
+            <div class="youtube-video">
+                <iframe width="560" height="315" src="https://youtu.be/6cuJoAmljEM?si=SWlzkiqcsJ06Ez0R" title="You NEED this ChatGPT Prompt for Midjourney" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
             <!-- Embed Youtube content -->
         </section>
         <section id="guides">
@@ -80,6 +90,85 @@
             <div id="guide3">Content for Guide3...</div>
         </section>
     </div>
+   
+
+    <div id="homepage" class="container homepage-container">
+
+
+        
+        <!-- ChatGPT Prompts Section -->
+        <div class="home-section" id="chatgpt-prompts-home">
+            <!-- Content for ChatGPT Prompts -->
+            <!-- Section with sidebar for prompts -->
+            <div class="sidebar">
+                <!-- Sidebar content similar to the ChatGPT Prompts section -->
+                <h2>ChatGPT Prompts</h2>
+                <ul>
+                    <li><a href="#" onclick="loadContent('Midjourney_ChatGPT_Instructions.txt')">Midjourney Instructions</a></li>
+                    <li><a href="#" onclick="loadContent('Dall-E_ChatGPT_AntiCensorPrompt.txt')">Dall-E AntiCensorPrompt</a></li>
+                    <li><a href="#" onclick="loadContent('prompt3.txt')">Test Prompt</a></li>
+                    <!-- Add more prompts as needed -->
+                </ul>
+
+            </div>
+            <div class="prompt-content">
+                <!-- Content area for selected prompt -->
+            </div>
+        </div>
+    
+        <!-- GPTs Section -->
+        <div class="home-section" id="gpts-home">
+            <!-- Repeat this structure for each GPT -->
+            <div class="grid-item">
+                <a href="#link1">
+                    <img src="images\Icon_MidjourneyGPT.png" alt="GPT Icon"> <!-- Replace with actual icon path -->
+                    <p>MidjourneyGPT</p>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="#link2">
+                    <img src="images/Icon_WebpageDeveloper.png" alt="GPT Icon"> <!-- Replace with actual icon path -->
+                    <p>WebpageDeveloper</p>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="#link3">
+                    <img src="images\Icon_DavinciResolveAssistant.png" alt="GPT Icon"> <!-- Replace with actual icon path -->
+                    <p>DavinciResolve Assistant</p>
+                </a>
+            </div>
+            <!-- More GPT items -->
+        </div>
+    
+        <!-- Background Information Section -->
+        <div class="home-section" id="background-info">
+            <!-- Content for background information -->
+            <!-- About section -->
+            <h2>About CakebearCreative</h2>
+            <p>Hi! I'm Cakebear - A bear who loves learning new AI workflows and sharing it with the world. I specialize in AI tools like ChatGPT, Midjourney and A1111, and I try to find creative use cases for all of them. Like making AI movies, generating text-to-image prompts in ChatGPT, or maybe even using AI tools for making video games. So, what are you waiting for? Browse around and take part of my Prompts and GPTs!</p>
+            <img src="images\about_img.jpg" alt="About Cakebear AI"> <!-- Replace with actual image path -->
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h3>Contact Me</h3>
+            <p>Feel free to reach out or follow me on my platforms:</p>
+            <ul>
+                <li><a href="https://www.youtube.com/channel/UCz-8kxt0A_0xBiI_mz66OUw" target="https://www.youtube.com/channel/UCz-8kxt0A_0xBiI_mz66OUw">Youtube</a></li>
+                <li><a href="https://github.com/CakebearCreative" target="https://github.com/CakebearCreative">GitHub</a></li>
+                <li><a href="https://twitter.com/CakebearCreate" target="https://twitter.com/CakebearCreate">Twitter</a></li>
+                <li><a href="mailto:CakebearCreative@gmail.com">CakebearCreative@gmail.com</a></li>
+            </ul>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
     <script src="fetchtxt.js"></script>
 </body>
