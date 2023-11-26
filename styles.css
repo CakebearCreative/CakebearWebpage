@@ -292,6 +292,31 @@ section {
 
 
 
+/*
+.highlighted-section {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+}
+*/
+.button:hover, button:hover, a.button:hover {
+    background-color: #e0e0e0; /* Light grey background on hover */
+    color: #333; /* Darker text color */
+    /* Other styling as needed */
+}
+
+.active-nav-link {
+    background-color: #f0f0f0; /* Example: Light grey background */
+    color: #333; /* Example: Darker text color */
+    /* Other styling as needed */
+}
+
+
+.active-prompt {
+    background-color: #f0f0f0; /* Example: Light grey background */
+    color: #333; /* Example: Darker text color */
+    /* Other styling as needed */
+}
+
 
 
 @media screen and (max-width: 768px) {
