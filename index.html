@@ -26,13 +26,15 @@
                 <h2>ChatGPT Prompts</h2>
                 <a href="https://github.com/CakebearCreative">Visit my GitHub</a>
                 <ul>
-                    <li><a href="#" onclick="loadContent('Midjourney_ChatGPT_Instructions.txt','content-area', this)">Midjourney Instructions</a></li>
-                    <li><a href="#" onclick="loadContent('Dall-E_ChatGPT_AntiCensorPrompt.txt','content-area', this)">Dall-E AntiCensorPrompt</a></li>
-                    <li><a href="#" onclick="loadContent('prompt3.txt','content-area', this)">Test Prompt</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('start.txt', 'content-area', this, 'chatgpt-prompt-title')">Start</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('Midjourney_ChatGPT_Instructions.txt','content-area', this, 'chatgpt-prompt-title')">Midjourney Instructions</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('Dall-E_ChatGPT_AntiCensorPrompt.txt','content-area', this, 'chatgpt-prompt-title')">Dall-E AntiCensorPrompt</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('prompt3.txt','content-area', this, 'chatgpt-prompt-title')">Test Prompt</a></li>
                     <!-- More prompts -->
                 </ul>
             </div>
             <div class="main-content" id="content-area">
+                <h3 id="chatgpt-prompt-title"></h3>
                 <!-- Content will be loaded here -->
             </div>
         </section>
@@ -134,11 +136,8 @@
         </section>
     </div>
    
-
     <div id="homepage" class="container homepage-container">
 
-
-        
         <!-- ChatGPT Prompts Section -->
         <div class="home-section" id="chatgpt-prompts-home">
             <!-- Content for ChatGPT Prompts -->
@@ -147,14 +146,16 @@
                 <!-- Sidebar content similar to the ChatGPT Prompts section -->
                 <h2>ChatGPT Prompts</h2>
                 <ul>
-                    <li><a href="#" onclick="loadContent('Midjourney_ChatGPT_Instructions.txt','home-content-area', this)">Midjourney Instructions</a></li>
-                    <li><a href="#" onclick="loadContent('Dall-E_ChatGPT_AntiCensorPrompt.txt','home-content-area', this)">Dall-E AntiCensorPrompt</a></li>
-                    <li><a href="#" onclick="loadContent('prompt3.txt','home-content-area', this)">Test Prompt</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('start.txt', 'home-content-area', this, 'homepage-prompt-title')">Start</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('Midjourney_ChatGPT_Instructions.txt','home-content-area', this, 'homepage-prompt-title')">Midjourney Instructions</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('Dall-E_ChatGPT_AntiCensorPrompt.txt','home-content-area', this, 'homepage-prompt-title')">Dall-E AntiCensorPrompt</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('prompt3.txt','home-content-area', this, 'homepage-prompt-title')">Test Prompt</a></li>
                     <!-- Add more prompts as needed -->
                 </ul>
 
             </div>
             <div class="prompt-content" id="home-content-area">
+                <h3 id="homepage-prompt-title"></h3>
                 <!-- Content area for selected prompt -->
             </div>
         </div>
@@ -181,7 +182,6 @@
                 </a>
             </div>
 
-
             <div class="grid-item">
                 <a href="https://chat.openai.com/g/g-T69HvzgME-davinci-resolve-assistant">
                     <img src="images\Icon_DavinciResolveAssistant.png" alt="GPT Icon"> <!-- Replace with actual icon path -->
@@ -202,8 +202,6 @@
                 </a>
             </div>
 
-
-
             <!-- More GPT items -->
         </div>
     
@@ -216,11 +214,6 @@
             <img src="images\about_img.jpg" alt="About Cakebear AI"> <!-- Replace with actual image path -->
         </div>
     </div>
-
-
-
-
-
 
 
     <footer class="site-footer">
@@ -238,5 +231,6 @@
 
     <script src="script.js"></script>
     <script src="fetchtxt.js"></script>
+    <script src="loadContentPlaceholder.js"></script>
 </body>
 </html>
