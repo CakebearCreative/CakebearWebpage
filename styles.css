@@ -86,13 +86,17 @@ section {
 .grid-item {
     text-align: center;
     padding: 10px; /* Add padding for spacing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for the effect */
 }
+
 
 .grid-item img {
     width: 100%; /* Make image take full width of the grid item */
     max-width: 150px; /* Limiting the maximum width */
     height: auto;
+    margin: 5px;
     margin-bottom: 0px;
+    border-radius: 10px; /* Adjust this value to control the roundness */
 }
 
 .icon-description {
@@ -138,11 +142,21 @@ section {
 }
 
 
+#chatgpt-prompt-title {
+    margin-bottom: 20px; /* Adjust as needed for vertical space */
+}
+
+#homepage-prompt-title {
+    margin-bottom: 20px; /* Adjust as needed for vertical space */
+}
+
+
 
 .sidebar {
     flex: 0 0 220px; /* Don't grow, don't shrink, start at 250px width */
     width: 220px; /* Adjust width as needed */
-    background-color: #2a2a2a;
+    /*background-color: #2a2a2a;*/
+    background-color: #1c1c1c;
     height: 80vh; /* Full viewport height */
     overflow-y: auto; /* Scrollable */
     padding: 20px;
@@ -251,6 +265,10 @@ section {
     margin-bottom: 30px;
 }
 
+.youtube-video iframe{
+    border-radius: 18px; /* Adjust this value to control the roundness */
+}
+
 
 
 
@@ -304,17 +322,40 @@ section {
     /* Other styling as needed */
 }
 
-.active-nav-link {
-    background-color: #f0f0f0; /* Example: Light grey background */
-    color: #333; /* Example: Darker text color */
+
+nav a:hover, .sidebar a:hover {
+    background-color: #313131; /* Light grey background on hover */
+    color: #ffffff; /* Darker text color */
+    border-radius: 10px; /* Adjust this value to control the roundness */
     /* Other styling as needed */
 }
 
 
+
+.grid-item:hover {
+    background-color: #313131; /* Light grey background on hover */
+    padding: 5px 5px;
+    transform: scale(1.05); /* Slightly scale up the item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding shadow for depth */
+}
+
+.active-nav-link {
+    background-color: #313131;
+    color: #ffffff;
+    border-radius: 10px; /* Adjust this value to control the roundness */
+    padding: 8px 10px;
+}
+
+
 .active-prompt {
-    background-color: #f0f0f0; /* Example: Light grey background */
-    color: #333; /* Example: Darker text color */
+    background-color: #313131; /* A lighter shade for the background */
+    color: #ffffff; /* Keeping the text color darker for contrast */
+    border-radius: 10px; /* Adjust this value to control the roundness */
     /* Other styling as needed */
+}
+
+#background-info img {
+    border-radius: 10px; /* Adjust this value to control the roundness */
 }
 
 
@@ -337,6 +378,7 @@ section {
 
     .grid-item img {
         max-width: 100px; /* Smaller icons on smaller screens */
+        border-radius: 10px; /* Adjust this value to control the roundness */
     }
 
     .homepage-container .home-section {
