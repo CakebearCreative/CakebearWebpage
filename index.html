@@ -22,7 +22,7 @@
     <div class="container">
         <nav>
             <ul>
-                <li><a href="#homepage">Homepage</a></li>
+                <li><a href="#homepage">Home</a></li>
                 <li><a href="#chatgpt-prompts">ChatGPT Prompts</a></li>
                 <li><a href="#gpts">GPTs</a></li>
                 <li><a href="#youtube">Youtube</a></li>
@@ -34,10 +34,10 @@
                 <h2>ChatGPT Prompts</h2>
                 <a href="https://github.com/CakebearCreative">Visit my GitHub</a>
                 <ul>
-                    <li><a href="#" id="chatgpt-start-link" onclick="loadContent('start.txt', 'content-area', this, 'chatgpt-prompt-title')">Start</a></li>
-                    <li><a href="#" onclick="loadContent('Midjourney_ChatGPT_Instructions.txt','content-area', this, 'chatgpt-prompt-title')">Midjourney Instructions</a></li>
-                    <li><a href="#" onclick="loadContent('Dall-E_ChatGPT_AntiCensorPrompt.txt','content-area', this, 'chatgpt-prompt-title')">Dall-E AntiCensorPrompt</a></li>
-                    <li><a href="#" onclick="loadContent('prompt3.txt','content-area', this, 'chatgpt-prompt-title')">Test Prompt</a></li>
+                    <li><a href="#" id="chatgpt-start-link" onclick="loadContentPlaceholder('start.txt', 'content-area', this, 'chatgpt-prompt-title')">Start</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('Midjourney_ChatGPT_Instructions.txt','content-area', this, 'chatgpt-prompt-title')">Midjourney Instructions</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('Dall-E_ChatGPT_AntiCensorPrompt.txt','content-area', this, 'chatgpt-prompt-title')">Dall-E AntiCensorPrompt</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('prompt3.txt','content-area', this, 'chatgpt-prompt-title')">Test Prompt</a></li>
                     <!-- More prompts -->
                 </ul>
             </div>
@@ -120,19 +120,27 @@
             <a href="https://www.youtube.com/channel/UCz-8kxt0A_0xBiI_mz66OUw">Visit my Youtube Page</a>
             <div class="youtube-video">
                 <p class="video-description">You NEED this ChatGPT Prompt for Midjourney</p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/6cuJoAmljEM" title="You NEED this ChatGPT Prompt for Midjourney" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="iframe-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6cuJoAmljEM" title="You NEED this ChatGPT Prompt for Midjourney" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
             <div class="youtube-video">
                 <p class="video-description">Unlock Dall-E 3 | Anti-Censorship Prompt</p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/fKe-YR_lTzI" title="You NEED this ChatGPT Prompt for Midjourney" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="iframe-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fKe-YR_lTzI" title="You NEED this ChatGPT Prompt for Midjourney" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
             <div class="youtube-video">
                 <p class="video-description">The Best AI Image Generator Yet | Let me Explain</p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/GYUXhy6p-8k" title="You NEED this ChatGPT Prompt for Midjourney" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="iframe-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/GYUXhy6p-8k" title="You NEED this ChatGPT Prompt for Midjourney" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
             <div class="youtube-video">
                 <p class="video-description">WATCH THIS FIRST - Midjourney Inpainting | Rare tips</p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/iDDNg2i7YpU" title="You NEED this ChatGPT Prompt for Midjourney" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="iframe-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iDDNg2i7YpU" title="You NEED this ChatGPT Prompt for Midjourney" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
             <!-- Embed Youtube content -->
         </section>
@@ -159,10 +167,10 @@
                 <!-- Sidebar content similar to the ChatGPT Prompts section -->
                 <h2>ChatGPT Prompts</h2>
                 <ul>
-                    <li><a href="#" id="home-start-link" onclick="loadContent('start.txt', 'home-content-area', this, 'homepage-prompt-title')">Start</a></li>
-                    <li><a href="#" onclick="loadContent('Midjourney_ChatGPT_Instructions.txt','home-content-area', this, 'homepage-prompt-title')">Midjourney Instructions</a></li>
-                    <li><a href="#" onclick="loadContent('Dall-E_ChatGPT_AntiCensorPrompt.txt','home-content-area', this, 'homepage-prompt-title')">Dall-E AntiCensorPrompt</a></li>
-                    <li><a href="#" onclick="loadContent('prompt3.txt','home-content-area', this, 'homepage-prompt-title')">Test Prompt</a></li>
+                    <li><a href="#" id="home-start-link" onclick="loadContentPlaceholder('start.txt', 'home-content-area', this, 'homepage-prompt-title')">Start</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('Midjourney_ChatGPT_Instructions.txt','home-content-area', this, 'homepage-prompt-title')">Midjourney Instructions</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('Dall-E_ChatGPT_AntiCensorPrompt.txt','home-content-area', this, 'homepage-prompt-title')">Dall-E AntiCensorPrompt</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('prompt3.txt','home-content-area', this, 'homepage-prompt-title')">Test Prompt</a></li>
                     <!-- Add more prompts as needed -->
                 </ul>
 
@@ -248,5 +256,6 @@
 
     <script src="script.js"></script>
     <script src="fetchtxt.js"></script>
+    <script src="loadContentPlaceholder.js"></script>
 </body>
 </html>
