@@ -1,4 +1,4 @@
-function loadContent(fileName, targetId, clickedElement) {
+function loadContent(fileName, targetId, clickedElement, titleId) {
     // Path to the directory containing the .txt files
     const baseDir = 'prompts/';
 
@@ -10,6 +10,7 @@ function loadContent(fileName, targetId, clickedElement) {
         .then(response => response.text())
         .then(data => {
             document.getElementById(targetId).textContent = data;
+            document.getElementById(titleId).textContent = clickedElement.textContent;
             // Update the active prompt styling
             updateActivePromptStyle(clickedElement);
         })
