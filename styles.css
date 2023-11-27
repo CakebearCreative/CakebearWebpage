@@ -123,6 +123,9 @@ section {
     display: flex;
     flex-direction: row; /* Align children in a row */
     width: 100%; /* Take full width of the container */
+    padding: 15px;
+    padding-top: 50px;
+    padding-left: 10px;
 }
 
 /* Default block layout for other sections */
@@ -144,10 +147,12 @@ section {
 
 #chatgpt-prompt-title {
     margin-bottom: 20px; /* Adjust as needed for vertical space */
+    font-weight: bold;
 }
 
 #homepage-prompt-title {
     margin-bottom: 20px; /* Adjust as needed for vertical space */
+    font-weight: bold;
 }
 
 
@@ -177,7 +182,7 @@ section {
 
 .main-content {
     flex-grow: 1;
-    padding: 20px;
+    padding: 0px;
     overflow-y: auto; /* Scrollable */
 }
 
@@ -256,7 +261,24 @@ section {
     /* other styles... */
 }
 
+.container-homepage-title-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
 
+.container-chatgpt-title-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+}
+
+.homepage-content-title, .main-content-title {
+    text-align: left; /* Align text to the left */
+    margin-bottom: 10px; /* Space below the title */
+    /* Additional styling as needed */
+}
 
 
 .youtube-video {
