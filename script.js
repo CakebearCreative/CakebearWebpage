@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.container > section, .homepage-container');
     const navLinks = document.querySelectorAll('nav a');
     const homepageSection = document.getElementById('homepage');
+    const homestartLink = document.getElementById('home-start-link');
+    const chatgptstartLink = document.getElementById('chatgpt-start-link');
 
     // Hide all sections initially
     sections.forEach(section => {
@@ -36,4 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
             e.target.classList.add('active-nav-link'); // Add active class to the clicked nav link
         });
     });
+
+    // Select the start sidebar link
+    if (chatgptstartLink) {
+        chatgptstartLink.click();
+    }
+    // Select the start sidebar link
+    if (homestartLink) {
+        homestartLink.click();
+    }
 });
