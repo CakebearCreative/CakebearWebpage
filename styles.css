@@ -59,16 +59,31 @@ section {
     background-image: url('images/banner.jpg'); /* Relative path to the banner image */
     background-size: cover;
     background-position: center;
-    padding: 50px 0;
+    padding-top: 50px;
     text-align: center;
 }
 
 .banner h1 {
+    margin-bottom: 10px;
     color: #ffffff;
     font-size: 40px;
-    margin: 0;
 }
 
+.banner h2 {
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.banner h1, .banner h2 {
+    color: #ffffff; /* Your existing text color */
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+         -1px 1px 0 #000,
+         1px 1px 0 #000; /* Black text shadow */
+    /* Other existing styles */
+}
 
 
 .container.gpts a {
@@ -391,6 +406,10 @@ nav a:hover, .sidebar a:hover {
 
     .banner h1 {
         font-size: 30px;
+    }
+
+    .banner h2 {
+        font-size: 15px;
     }
 
     .grid-container {
