@@ -26,16 +26,21 @@
                 <h2>ChatGPT Prompts</h2>
                 <a href="https://github.com/CakebearCreative">Visit my GitHub</a>
                 <ul>
-                    <li><a href="#" onclick="loadContent('start.txt', 'content-area', this, 'chatgpt-prompt-title')">Start</a></li>
-                    <li><a href="#" onclick="loadContent('Midjourney_ChatGPT_Instructions.txt','content-area', this, 'chatgpt-prompt-title')">Midjourney Instructions</a></li>
-                    <li><a href="#" onclick="loadContent('Dall-E_ChatGPT_AntiCensorPrompt.txt','content-area', this, 'chatgpt-prompt-title')">Dall-E AntiCensorPrompt</a></li>
-                    <li><a href="#" onclick="loadContent('prompt3.txt','content-area', this, 'chatgpt-prompt-title')">Test Prompt</a></li>
+                    <li><a href="#" id="chatgpt-start-link" onclick="loadContentPlaceholder('start.txt', 'content-area', this, 'chatgpt-prompt-title')">Start</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('Midjourney_ChatGPT_Instructions.txt','content-area', this, 'chatgpt-prompt-title')">Midjourney Instructions</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('Dall-E_ChatGPT_AntiCensorPrompt.txt','content-area', this, 'chatgpt-prompt-title')">Dall-E AntiCensorPrompt</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('prompt3.txt','content-area', this, 'chatgpt-prompt-title')">Test Prompt</a></li>
                     <!-- More prompts -->
                 </ul>
             </div>
-            <div class="main-content" id="content-area">
-                <h3 id="chatgpt-prompt-title"></h3>
-                <!-- Content will be loaded here -->
+
+            <div class="container-chatgpt-title-content">
+                <div class="main-content-title" id="chatgpt-prompt-title">
+                    <!-- Content will be loaded here -->
+                </div>
+                <div class="main-content" id="content-area">
+                    <!-- Content will be loaded here -->
+                </div>
             </div>
         </section>
         <section id="gpts">
@@ -146,17 +151,21 @@
                 <!-- Sidebar content similar to the ChatGPT Prompts section -->
                 <h2>ChatGPT Prompts</h2>
                 <ul>
-                    <li><a href="#" onclick="loadContent('start.txt', 'home-content-area', this, 'homepage-prompt-title')">Start</a></li>
-                    <li><a href="#" onclick="loadContent('Midjourney_ChatGPT_Instructions.txt','home-content-area', this, 'homepage-prompt-title')">Midjourney Instructions</a></li>
-                    <li><a href="#" onclick="loadContent('Dall-E_ChatGPT_AntiCensorPrompt.txt','home-content-area', this, 'homepage-prompt-title')">Dall-E AntiCensorPrompt</a></li>
-                    <li><a href="#" onclick="loadContent('prompt3.txt','home-content-area', this, 'homepage-prompt-title')">Test Prompt</a></li>
+                    <li><a href="#" id="home-start-link" onclick="loadContentPlaceholder('start.txt', 'home-content-area', this, 'homepage-prompt-title')">Start</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('Midjourney_ChatGPT_Instructions.txt','home-content-area', this, 'homepage-prompt-title')">Midjourney Instructions</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('Dall-E_ChatGPT_AntiCensorPrompt.txt','home-content-area', this, 'homepage-prompt-title')">Dall-E AntiCensorPrompt</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('prompt3.txt','home-content-area', this, 'homepage-prompt-title')">Test Prompt</a></li>
                     <!-- Add more prompts as needed -->
                 </ul>
 
             </div>
-            <div class="prompt-content" id="home-content-area">
-                <h3 id="homepage-prompt-title"></h3>
-                <!-- Content area for selected prompt -->
+            <div class="container-homepage-title-content">
+                <div class="homepage-content-title" id="homepage-prompt-title">
+                    <!-- Content will be loaded here -->
+                </div>
+                <div class="prompt-content" id="home-content-area">
+                    <!-- Content area for selected prompt -->
+                </div>
             </div>
         </div>
     
