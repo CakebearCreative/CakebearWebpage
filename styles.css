@@ -31,7 +31,7 @@ nav {
     background-color: #1c1c1c; /* Slightly lighter dark for contrast */
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 nav ul {
@@ -46,7 +46,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0px 10px;
+    margin: 0px 5px;
 }
 
 nav a {
@@ -54,6 +54,7 @@ nav a {
     text-decoration: none;
     padding: 10px;
     display: block;
+    transition: background-color 0.1s;
 }
 
 section {
@@ -69,6 +70,9 @@ section {
     text-align: center;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .banner h1 {
@@ -170,10 +174,22 @@ section {
     font-size:small;
 }
 
-.gpts-store-link {
-    color: #3697ff;
+.generic-link {
     margin-bottom:20px;
 }
+.generic-link a {
+    text-decoration: none;
+}
+.generic-link a:link {
+    color: #3697ff;
+}
+.generic-link a:visited {
+    color:rgb(210, 127, 255);
+}
+.generic-link a:hover {
+    text-decoration: underline;
+}
+
 
 
 #chatgpt-prompt-title {
@@ -197,6 +213,13 @@ section {
     overflow-y: auto; /* Scrollable */
     padding: 20px;
     border-radius: 10px;
+}
+
+
+.sidebar h2 {
+    text-align: left;
+    margin-top: 8px;
+    margin-bottom: 30px;
 }
 
 .sidebar ul {
@@ -431,12 +454,18 @@ section {
     /* Other styling as needed */
 }
 
+.sidebar a {
+    transition: background-color 0.1s;
+}
+
+.home-section .sidebar a {
+    padding: 10px;
+}
 
 nav a:hover, .sidebar a:hover {
-    background-color: #313131; /* Light grey background on hover */
-    color: #ffffff; /* Darker text color */
-    border-radius: 10px; /* Adjust this value to control the roundness */
-    /* Other styling as needed */
+    background-color: #313131;
+    color: #ffffff;
+    border-radius: 10px;
 }
 
 
@@ -488,12 +517,63 @@ img, video, iframe {
     height: 100%;
 }
 
+.banner .social-icon img {
+    width: 40px; /* Adjust the size as needed */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.social-icons-container, .social-icons-spacer {
+    flex: 1;
+    display: flex;
+    width: 60px;
+    /* Additional styling if needed */
+}
+
+.social-icons-container {
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 5px;
+}
+
+.social-icons-spacer {
+    flex-grow: 1;
+}
+
+.social-icon {
+    margin: 10px; /* Space around each icon */
+    margin-bottom: 0px;
+}
+
+.social-icon img {
+    transition: opacity 0.2s;
+}
+
+.banner .social-icon:hover img {
+    opacity: 0.6; /* Example hover effect */
+}
+
 
 @media screen and (max-width: 1024px) {
 
     
     .sidebar {
-    flex: 0 0 180px;  /*Don't grow, don't shrink, start at 250px width */
+    flex: 0 0 180px;
+    padding-left: 16px;
+    padding-right: 16px;
+    }
+
+    .sidebar h2 {
+        text-align: center;
+    }
+
+    .sidebar a {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .sidebar .generic-link {
+        text-align: center;
     }
 
     #gpts-home {
@@ -513,7 +593,21 @@ img, video, iframe {
     nav ul li {
         display: block;
         text-align: center;
-        margin: 10px 6px;
+        margin: 10px 4px;
+    }
+
+    .banner .social-icon img {
+        width: 35px; /* Adjust the size as needed */
+        height: auto; /* Maintain the aspect ratio */
+    }
+
+    .social-icon {
+        margin: 7px; /* Space around each icon */
+        margin-bottom: 0px;
+    }
+
+    .social-icons-container {
+        margin-top: 23px;
     }
 
 }
@@ -540,7 +634,17 @@ img, video, iframe {
 
     .sidebar {
         flex: 0 0 150px;  /*Don't grow, don't shrink, start at 250px width */
-        }
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .sidebar h2 {
+        text-align: center;
+    }
+
+    .sidebar .generic-link {
+        text-align: center;
+    }
 
     #gpts-home {
         grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
@@ -549,7 +653,7 @@ img, video, iframe {
 
     
     #chatgpt-prompts-home {
-        height: 38vh;
+        height: 36vh;
     }
 
 
@@ -563,7 +667,19 @@ img, video, iframe {
         overflow-y: visible; /* Consider changing overflow behavior on small screens */
     }
 
-    
+    .banner .social-icon img {
+        width: 30px; /* Adjust the size as needed */
+        height: auto; /* Maintain the aspect ratio */
+    }
+
+    .social-icon {
+        margin: 4px; /* Space around each icon */
+        margin-bottom: 0px;
+    }
+
+    .social-icons-container {
+        margin-top: 26px;
+    }
 
     /* Other responsive adjustments */
 }
