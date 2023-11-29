@@ -553,6 +553,12 @@ img, video, iframe {
     opacity: 0.6; /* Example hover effect */
 }
 
+.homepage-container h3 {
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
 
 @media screen and (max-width: 1024px) {
 
