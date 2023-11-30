@@ -42,6 +42,9 @@ nav ul {
     padding: 0px;
     padding-left: 10px;
     padding-right: 10px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+
 }
 
 nav ul li {
@@ -55,6 +58,50 @@ nav a {
     padding: 10px;
     display: block;
     transition: background-color 0.1s;
+}
+
+
+nav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/*
+nav ul li a img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-bottom: 5px;
+    padding: 0;
+    border: 0;
+}
+*/
+
+nav ul li a .nav-icon {
+    font-size: 24px;
+    object-fit: contain;
+    margin-bottom: 5px; /* Space between icon and text */
+    padding: 0;
+    border: 0;
+}
+
+.nav-icon {
+    display: flex; /* Ensures the container is flex */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+}
+
+.nav-icon img {
+    width: 24px; /* Set size as needed */
+    height: 24px;
+    object-fit: contain;
+}
+
+.nav-text {
+    text-align: center;
+    /* Style for the text if needed */
 }
 
 section {
@@ -559,6 +606,43 @@ img, video, iframe {
     margin-bottom: 10px;
 }
 
+#gpts #search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding-right: 40px; /* Make room for the clear button */
+    box-sizing: border-box;
+    /* Additional styling */
+}
+
+.search-container {
+    position: relative;
+    width: 50%;
+    margin: 0 auto; /*sets the top and bottom margins to 0 and the left and right margins to auto. The auto value for left and right margins enables horizontal centering.*/
+}
+
+#clear-search {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-70%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 6px;
+    background-color: #efefef;
+    /* Style the button as needed */
+}
+
+#clear-search:hover {
+    background-color: #d9d9d9;
+    border: #000;
+    transition: background-color 0.5s;
+}
+
 
 @media screen and (max-width: 1024px) {
 
@@ -616,14 +700,30 @@ img, video, iframe {
         margin-top: 23px;
     }
 
+    .container-chatgpt-title-content {
+        padding: 17px;
+        padding-top: 20px; 
+    }
+
+    .container-homepage-title-content {
+        padding: 17px;
+        padding-top: 20px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
     nav ul li {
         display: block;
         text-align: center;
-        margin: 10px 2px;
+        margin: 4px 2px;
     }
+
+    nav ul {
+        margin-top: 4px;
+        margin-bottom: 0px;
+    }
+
 
     .banner h1 {
         font-size: 30px;
@@ -685,6 +785,16 @@ img, video, iframe {
 
     .social-icons-container {
         margin-top: 26px;
+    }
+
+    .container-chatgpt-title-content {
+        padding: 14px;
+        padding-top: 20px; 
+    }
+
+    .container-homepage-title-content {
+        padding: 14px;
+        padding-top: 20px;
     }
 
     /* Other responsive adjustments */
