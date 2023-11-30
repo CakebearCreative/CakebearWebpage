@@ -19,7 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetId = e.target.getAttribute('href').substring(1);
+
+            // Find the nearest 'a' tag
+            let targetLink = e.target;
+            while (targetLink && targetLink.nodeName !== 'A') {
+                targetLink = targetLink.parentNode;
+            }
+
+            if (!targetLink) return; // Exit if no link found
+
+            const targetId = targetLink.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
 
             sections.forEach(section => {
@@ -35,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 targetSection.style.display = 'block';
             }
-            e.target.classList.add('active-nav-link'); // Add active class to the clicked nav link
+            targetLink.classList.add('active-nav-link'); // Add active class to the clicked nav link
         });
     });
 
