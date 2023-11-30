@@ -1,0 +1,10 @@
+From https://ionic.io/ionicons:
+logo-github.svg
+logo-youtube.svg
+disc.svg
+document-text.svg
+home.svg
+list.svg
+reader.svg
+
+<ion-icon name="home"></ion-icon>
