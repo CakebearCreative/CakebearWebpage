@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const homepageSection = document.getElementById('homepage');
     const homestartLink = document.getElementById('home-start-link');
     const chatgptstartLink = document.getElementById('chatgpt-start-link');
+    const homepageIntroSection = document.getElementById('homepage-intro');
 
     // Hide all sections initially
     sections.forEach(section => {
@@ -14,6 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Show the homepage section by default
     homepageSection.style.display = 'block'; // Or 'flex' if that's more appropriate
     document.querySelector('nav a[href="#homepage"]').classList.add('active-nav-link');
+
+    if (homepageIntroSection) {
+        homepageIntroSection.style.display = 'block'; // Adjust as needed
+    }
 
 
     navLinks.forEach(link => {
@@ -45,6 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 targetSection.style.display = 'block';
             }
             targetLink.classList.add('active-nav-link'); // Add active class to the clicked nav link
+
+            // Special handling for homepage
+            if (targetId === 'homepage') {
+                const homepageIntroSection = document.getElementById('homepage-intro');
+                if (homepageIntroSection) {
+                    homepageIntroSection.style.display = 'block';
+                }
+            }
         });
     });
 
