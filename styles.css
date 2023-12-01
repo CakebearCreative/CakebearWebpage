@@ -21,7 +21,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     flex: 1;
     display: block; /* Reverts to block-level layout */
     width: 100%; /* Ensures it spans the full width */
@@ -32,6 +32,8 @@ nav {
     display: flex;
     justify-content: center;
     padding: 5px 0;
+    border-bottom: 2px solid;
+    border-color: #25343c;
 }
 
 nav ul {
@@ -123,9 +125,9 @@ section {
 }
 
 .banner h1 {
-    margin-bottom: 10px;
+    margin-bottom: 2px;
     color: #ffffff;
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .banner h2 {
@@ -294,14 +296,108 @@ section {
 
 
 
-
-
 .homepage-container .home-section {
     overflow-y: auto; /* Enables vertical scrolling */
     padding: 15px;
 }
 
-#chatgpt-prompts-home {
+
+#homepage-intro {
+    padding: 0px;
+}
+
+#homepage-intro .intro-container {
+    width: 100%;
+    padding: 15vh 0px;  /*Adjust padding as needed */
+    position: relative;
+    margin: 0px;
+}
+
+#homepage-intro .intro-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#homepage-intro .intro-container .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom, 
+        rgba(18, 18, 18, 0) 70%, 
+        rgba(18, 18, 18, 1)) 100%;
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+#homepage-intro .intro-text {
+    color: rgb(179, 241, 255); 
+    background-color: #182026;
+    margin: 0px 0px; 
+    padding: 5px 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    text-align: center;
+    border-style: solid;
+    border-color: #6f92a8;
+    border-width: 2px;
+}
+
+
+/* Position each text individually */
+#homepage-intro .intro-text:nth-child(3) { 
+    top: 46%;
+    padding: 10px 10px;
+    font-weight: bold;
+    z-index: 2;
+}
+#homepage-intro .intro-text:nth-child(4) { 
+    top: 85%;
+    font-size: 14px;
+    white-space: nowrap;
+}
+#homepage-intro .intro-text:nth-child(5) { 
+    top: 25%;
+    left: 50%;
+    font-size: 14px;
+    white-space: nowrap;
+}
+#homepage-intro .intro-text:nth-child(6) { 
+    top: 55%;
+    left: 90%;
+    font-size: 12px;
+    white-space: nowrap;
+}
+#homepage-intro .intro-text:nth-child(7) { 
+    top: 55%;
+    left: 10%;
+    font-size: 12px;
+    white-space: nowrap;
+}
+#homepage-intro .intro-text:nth-child(8) { 
+    top: 55%;
+    left: 25%;
+    font-size: 12px;
+    white-space: nowrap;
+}
+#homepage-intro .intro-text:nth-child(9) { 
+    top: 55%;
+    left: 75%;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+
+/*
+#homepage-intro {
     display: flex;
     height: 28vh;
     overflow-y: auto;
@@ -310,8 +406,8 @@ section {
     padding-bottom: 20px;
     padding-left: 0px;
     padding-right: 10px;
-    /* Additional styles for ChatGPT Prompts section */
 }
+/*
 
 /*
 .sidebar {
@@ -676,14 +772,14 @@ img, video, iframe {
         grid-row-gap: 20px; /* Add space between rows */
     }
 
-    #chatgpt-prompts-home {
+    #homepage-intro {
         height: 33vh;
     }
 
     nav ul li {
         display: block;
         text-align: center;
-        margin: 10px 4px;
+        margin: 0px 4px;
     }
 
     .banner .social-icon img {
@@ -710,6 +806,10 @@ img, video, iframe {
         padding-top: 20px;
     }
 
+    .homepage-container h3 {
+        margin-top: 15px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -726,7 +826,7 @@ img, video, iframe {
 
 
     .banner h1 {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     .banner h2 {
@@ -758,7 +858,7 @@ img, video, iframe {
     }
 
     
-    #chatgpt-prompts-home {
+    #homepage-intro {
         height: 36vh;
     }
 
@@ -795,6 +895,10 @@ img, video, iframe {
     .container-homepage-title-content {
         padding: 14px;
         padding-top: 20px;
+    }
+
+    .homepage-container h3 {
+        margin-top: 0px;
     }
 
     /* Other responsive adjustments */
