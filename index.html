@@ -75,10 +75,10 @@
                     <a href="https://github.com/CakebearCreative" target="_blank">Visit my GitHub</a>
                 </div>
                 <ul>
-                    <li><a href="#" id="chatgpt-start-link" onclick="loadContent('start.txt', 'content-area', this, 'chatgpt-prompt-title')">Start</a></li>
-                    <li><a href="#" onclick="loadContent('Midjourney_ChatGPT_Instructions.txt','content-area', this, 'chatgpt-prompt-title')">Midjourney Instructions</a></li>
-                    <li><a href="#" onclick="loadContent('Dall-E_ChatGPT_AntiCensorPrompt.txt','content-area', this, 'chatgpt-prompt-title')">DALL-E Anti-Censorship</a></li>
-                    <li><a href="#" onclick="loadContent('prompt3.txt','content-area', this, 'chatgpt-prompt-title')">Test Prompt</a></li>
+                    <li><a href="#" id="chatgpt-start-link" onclick="loadContentPlaceholder('start.txt', 'content-area', this, 'chatgpt-prompt-title')">Start</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('Midjourney_ChatGPT_Instructions.txt','content-area', this, 'chatgpt-prompt-title')">Midjourney Instructions</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('Dall-E_ChatGPT_AntiCensorPrompt.txt','content-area', this, 'chatgpt-prompt-title')">DALL-E Anti-Censorship</a></li>
+                    <li><a href="#" onclick="loadContentPlaceholder('prompt3.txt','content-area', this, 'chatgpt-prompt-title')">Test Prompt</a></li>
                     <!-- More prompts -->
                 </ul>
             </div>
@@ -288,6 +288,13 @@
             </div>
 
             <div class="grid-item">
+                <a href="#" class="dynamic-link" data-link-key="AGIInstructorExecutor" target="_blank">
+                    <img src="images\Icon_AGI_Instructor_Executor.png" alt="AGI Instructor Executor GPT"> <!-- Replace with actual icon path -->
+                    <p>AGI Instructor Executor</p>
+                </a>
+            </div>
+
+            <div class="grid-item">
                 <a href="#" class="dynamic-link" data-link-key="AINews" target="_blank">
                     <img src="images\Icon_AINews.png" alt="AI News GPT"> <!-- Replace with actual icon path -->
                     <p>AI News</p>
@@ -295,16 +302,10 @@
             </div>
 
             <div class="grid-item">
-                <a href="#" class="dynamic-link" data-link-key="ImageAntiCensorship" target="_blank">
-                    <img src="images\Icon_Dall-E Anti-Censorship3.png" alt="DALL-E Anti-Censorship GPT"> <!-- Replace with actual icon path -->
-                    <p>Image Anti-Censorship</p>
-                </a>
-            </div>
-            <div class="grid-item">
-                <a href="#" class="dynamic-link" data-link-key="CakebearTools" target="_blank">
+                <a href="#" class="dynamic-link" data-link-key="PythonCoder" target="_blank">
                 <!--<a href="https://chat.openai.com/g/g-b7VtYpwOu-cakebear-tools" target="_blank">-->
-                    <img src="images/Icon_CakebearTools_v2.png" alt="CakebearTools Overview"> <!-- Replace with actual icon path -->
-                    <p>CakebearTools</p>
+                    <img src="images/Icon_PythonCoder.png" alt="Python Coder GPT"> <!-- Replace with actual icon path -->
+                    <p>PythonCoder</p>
                 </a>
             </div>
 
@@ -388,5 +389,6 @@
 
     <script src="script.js"></script>
     <script src="fetchtxt.js"></script>
+    <script src="loadContentPlaceholder.js"></script>
 </body>
 </html>
