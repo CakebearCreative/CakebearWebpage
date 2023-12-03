@@ -75,10 +75,10 @@
                     <a href="https://github.com/CakebearCreative" target="_blank">Visit my GitHub</a>
                 </div>
                 <ul>
-                    <li><a href="#" id="chatgpt-start-link" onclick="loadContentPlaceholder('start.txt', 'content-area', this, 'chatgpt-prompt-title')">Start</a></li>
-                    <li><a href="#" onclick="loadContentPlaceholder('Midjourney_ChatGPT_Instructions.txt','content-area', this, 'chatgpt-prompt-title')">Midjourney Instructions</a></li>
-                    <li><a href="#" onclick="loadContentPlaceholder('Dall-E_ChatGPT_AntiCensorPrompt.txt','content-area', this, 'chatgpt-prompt-title')">DALL-E Anti-Censorship</a></li>
-                    <li><a href="#" onclick="loadContentPlaceholder('prompt3.txt','content-area', this, 'chatgpt-prompt-title')">Test Prompt</a></li>
+                    <li><a href="#" id="chatgpt-start-link" onclick="loadContent('start.txt', 'content-area', this, 'chatgpt-prompt-title')">Start</a></li>
+                    <li><a href="#" onclick="loadContent('Midjourney_ChatGPT_Instructions.txt','content-area', this, 'chatgpt-prompt-title')">Midjourney Instructions</a></li>
+                    <li><a href="#" onclick="loadContent('Dall-E_ChatGPT_AntiCensorPrompt.txt','content-area', this, 'chatgpt-prompt-title')">DALL-E Anti-Censorship</a></li>
+                    <li><a href="#" onclick="loadContent('prompt3.txt','content-area', this, 'chatgpt-prompt-title')">Test Prompt</a></li>
                     <!-- More prompts -->
                 </ul>
             </div>
@@ -389,6 +389,5 @@
 
     <script src="script.js"></script>
     <script src="fetchtxt.js"></script>
-    <script src="loadContentPlaceholder.js"></script>
 </body>
 </html>
