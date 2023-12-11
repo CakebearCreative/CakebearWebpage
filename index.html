@@ -13,7 +13,7 @@
     <meta name="keywords" content="AI Tools, GPT, Midjourney, A1111, ChatGPT, AI Guides, AI Technologies, Cakebear, CakebearCreative, Cakebear AI">
     <meta property="og:title" content="CakebearCreative | AI Tools & GPTs">
     <meta property="og:description" content="Discover the latest in AI tools and get custom prompts and GPTs for Midjourney, ChatGPT and A1111.">
-    <meta property="og:image" content="images/about_img.jpg">
+    <meta property="og:image" content="https://www.cakebearcreative.com/images/about_img.jpg">
     <meta property="og:url" content="https://www.cakebearcreative.com">
 </head>
 <body>
@@ -32,6 +32,7 @@
         </div>
     </div>
     <div class="container">
+        
         <nav>
             <ul>
                 <li>
@@ -68,17 +69,22 @@
                 </li>
             </ul>
         </nav>
+        <div class="nav-placeholder"></div>
         <section id="chatgpt-prompts">
+            <div class="menu-button">
+                <ion-icon name="list"></ion-icon>
+                Menu
+            </div>
             <div class="sidebar">
                 <h2>ChatGPT Prompts</h2>
                 <div class="generic-link">
                     <a href="https://github.com/CakebearCreative" target="_blank">Visit my GitHub</a>
                 </div>
                 <ul>
-                    <li><a href="#" id="chatgpt-start-link" onclick="loadContent('start.txt', 'content-area', this, 'chatgpt-prompt-title')">Start</a></li>
-                    <li><a href="#" onclick="loadContent('Midjourney_ChatGPT_Instructions.txt','content-area', this, 'chatgpt-prompt-title')">Midjourney Instructions</a></li>
-                    <li><a href="#" onclick="loadContent('Dall-E_ChatGPT_AntiCensorPrompt.txt','content-area', this, 'chatgpt-prompt-title')">DALL-E Anti-Censorship</a></li>
-                    <li><a href="#" onclick="loadContent('prompt3.txt','content-area', this, 'chatgpt-prompt-title')">Test Prompt</a></li>
+                    <li><a href="#" id="chatgpt-start-link" onclick="loadContentAndScroll(event, 'start.txt', 'content-area', this, 'chatgpt-prompt-title')">Start</a></li>
+                    <li><a href="#" onclick="loadContentAndScroll(event, 'Midjourney_ChatGPT_Instructions.txt','content-area', this, 'chatgpt-prompt-title')">Midjourney Instructions</a></li>
+                    <li><a href="#" onclick="loadContentAndScroll(event, 'Dall-E_ChatGPT_AntiCensorPrompt.txt','content-area', this, 'chatgpt-prompt-title')">DALL-E Anti-Censorship</a></li>
+                    <li><a href="#" onclick="loadContentAndScroll(event, 'AGI_Instructions.txt','content-area', this, 'chatgpt-prompt-title')">AGI Instructions</a></li>
                     <!-- More prompts -->
                 </ul>
             </div>
@@ -196,6 +202,60 @@
                         <p class="gpt-icon-text">A must have for GPT creators - Improves and extends instructions & knowledge of your GPT</p>
                     </a>
                 </div>
+
+
+
+                <div class="grid-item">
+                    <a href="#" class="dynamic-link" data-link-key="AIImageVariations" target="_blank">
+                        <img src="images/Icon_AIImageVariations2.png" alt="AI Image Variations GPT"> <!-- Replace with actual image path -->
+                        <p class="icon-description">AI Image Variations</p>
+                        <p class="gpt-icon-text">I take your image and make variations of it by using DALL-E</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="#" class="dynamic-link" data-link-key="CreatureCreator" target="_blank">
+                        <img src="images/Icon_CreatureCreator2.png" alt="Creature Creator GPT"> <!-- Replace with actual image path -->
+                        <p class="icon-description">Creature Creator</p>
+                        <p class="gpt-icon-text">I show you fantasy creatures you've never seen before</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="#" class="dynamic-link" data-link-key="SocialMediaTrendsAnalyzer" target="_blank">
+                        <img src="images/Icon_SocialMediaTrendsAnalyzer.png" alt="Social Media Trends Analyzer GPT"> <!-- Replace with actual image path -->
+                        <p class="icon-description">Social Media Trends Analyzer</p>
+                        <p class="gpt-icon-text">I watch social media for you, so you don't have to - for Content Creators</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="#" class="dynamic-link" data-link-key="GrokkTheOrc" target="_blank">
+                        <img src="images/Icon_GroccTheOrc2.PNG" alt="Grokk The Orc GPT"> <!-- Replace with actual image path -->
+                        <p class="icon-description">Grokk the Orc</p>
+                        <p class="gpt-icon-text">NPC for Dialogue - Furious Temper and Random SHOUTING</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="#" class="dynamic-link" data-link-key="RPGWorldAndStoryBuilder" target="_blank">
+                        <img src="images/Icon_RPGWorldAndStoryBuilder2.png" alt="RPG World and Story Builder GPT"> <!-- Replace with actual image path -->
+                        <p class="icon-description">RPG World & Story Builder</p>
+                        <p class="gpt-icon-text">I will develop zones and engaging plot for your fantasy RPG Game</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="#" class="dynamic-link" data-link-key="UnrealHelper" target="_blank">
+                        <img src="images/Icon_UnrealHelper3.png" alt="Unreal Helper GPT"> <!-- Replace with actual image path -->
+                        <p class="icon-description">Unreal Helper</p>
+                        <p class="gpt-icon-text">Beginner-friendly assistant for UE5 that helps you develop your game - no experience needed</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="#" class="dynamic-link" data-link-key="AIMovieMaker" target="_blank">
+                        <img src="images/Icon_AIMovieMaker.png" alt="AI Movie Maker GPT"> <!-- Replace with actual image path -->
+                        <p class="icon-description">AI Movie Maker</p>
+                        <p class="gpt-icon-text">I create story, dialogue and images - All from a Single Prompt</p>
+                    </a>
+                </div>
+
+
         
                 <!-- More grid items can be added in the same pattern -->
             </div>
@@ -235,15 +295,82 @@
             <!-- Embed Youtube content -->
         </section>
         <section id="guides">
-            <h2>Guides</h2>
+            <div class="menu-button-guides">
+                <ion-icon name="list"></ion-icon>
+                Menu
+            </div>
+            <div class="sidebar-guides">
+                <h2>Guides</h2>
+                <!--
+                <div class="generic-link">
+                    <a href="https://github.com/CakebearCreative" target="_blank">Visit my GitHub</a>
+                </div>
+                -->
+                <ul>
+                    <li><a href="Guides/MakingAIMovies.html">Making AI Movies</a></li>
+                    <li><a href="Guides/Useful&RareAITools.html">Useful & Rare AI Tools</a></li>
+                    <li><a href="Guides/DevelopingGamesWithAI.html">Developing Games with AI</a></li>
+                    <!-- More prompts -->
+                </ul>
+            </div>
+
+
+            <div class="guide-content-container">
+                <h2>Guides</h2>
+
+                <a href="Guides/MakingAIMovies.html" class="guide-row">
+                    <div class="guide-info">
+                        <span class="guide-title">Making AI Movies</span>
+                        <p class="guide-description">Workflow to enable making full AI movies from home - Using text-to-image generators, animating image-to-video with AnimateDiff, D-iD, RunwayML, generating dialogue audio with ElevenLabs, plot and story generation with LLMs like ChatGPT.</p>
+                        <p class="guide-author-date">CakebearCreative - 10 December 2023</p>
+                    </div>
+                    <img src="Guides/thumbnails/Icon_MakingAIMovies.png" alt="AI Movie Guide icon" class="guide-icon">
+                </a>
+
+                <!--
+                <div class="guide-row">
+                    <div class="guide-info">
+                        <a href="Guides/Guide01.html" class="guide-title">Making AI Movies</a>
+                        <p class="guide-description">Workflow to enable making full AI movies from home - Using text-to-image generators, animating image-to-video with AnimateDiff, D-iD, RunwayML, generating dialogue audio with ElevenLabs, plot and story generation with LLMs like ChatGPT.</p>
+                    </div>
+                    <img src="Guides/thumbnails/Icon_Guide01.png" alt="AI Movie Guide icon" class="guide-icon">
+                </div>
+                -->
+
+                
+                <a href="Guides/Useful&RareAITools.html" class="guide-row">
+                    <div class="guide-info">
+                        <span class="guide-title">Useful & Rare AI Tools</span>
+                        <p class="guide-description">Since AI Development goes fast, it's easy to miss several useful tools. This guide recommends free quality tools for background removal, image segmentation, inpainting, outpainting and more image processing features.</p>
+                        <p class="guide-author-date">CakebearCreative - 10 December 2023</p>
+                    </div>
+                    <img src="Guides/thumbnails/Icon_UsefulAndRareAITools.png" alt="Useful and Rare AI Tools Guide icon" class="guide-icon">
+                </a>
+
+                <a href="Guides/DevelopingGamesWithAI.html" class="guide-row">
+                    <div class="guide-info">
+                        <span class="guide-title">Developing Games with AI</span>
+                        <p class="guide-description">The entry to coding a game is easier than ever with quality LLMs. This guide shows you the modern workflow of scripting a simple Python game by using specialized GPTs with code uploading for hyper-productivity.</p>
+                        <p class="guide-author-date">CakebearCreative - 10 December 2023</p>
+                    </div>
+                    <img src="Guides/thumbnails/Icon_DevelopingGamesWithAI.png" alt="Developing Games with AI Guide icon" class="guide-icon">
+                </a>
+
+                
+            </div>
+
+
+            <!--
             <ul>
-                <li><a href="#guide1">Guide1</a></li>
+                <li><a href="Guides/Guide01.html">Guide1</a></li>
                 <li><a href="#guide2">Guide2</a></li>
                 <li><a href="#guide3">Guide3</a></li>
             </ul>
             <div id="guide1">Content for Guide1...</div>
             <div id="guide2">Content for Guide2...</div>
             <div id="guide3">Content for Guide3...</div>
+            -->
+
         </section>
     </div>
    
@@ -351,6 +478,14 @@
             AGIInstructorExecutor: "https://chat.openai.com/g/g-g5aFMOSIK-agi-instructor-executor",
             PythonCoder: "https://chat.openai.com/g/g-0VRbQJX8q-python-coder",
             GPTOptimizer: "https://chat.openai.com/g/g-KUV2Kid1E-gpt-optimizer",
+
+            AIImageVariations: "https://chat.openai.com/g/g-oXjkPwbvt-ai-image-variations",
+            CreatureCreator: "https://chat.openai.com/g/g-MBBnXrZYO-creature-creator",
+            GrokkTheOrc: "https://chat.openai.com/g/g-vq62s29BF-grokk-the-orc",
+            RPGWorldAndStoryBuilder: "https://chat.openai.com/g/g-SXmrzjs6I-rpg-world-story-builder",
+            SocialMediaTrendsAnalyzer: "https://chat.openai.com/g/g-Zs1owC2Pp-social-media-trends-analyzer",
+            UnrealHelper: "https://chat.openai.com/g/g-ym0d1deKm-unreal-helper",
+            AIMovieMaker: "https://chat.openai.com/g/g-k4Wd5fRd0-ai-movie-maker",
             // Add other links here
         };
 
@@ -387,7 +522,51 @@
         });
     </script>
 
+    <script>
+        function loadContentAndScroll(event, fileName, targetId, clickedElement, titleId) {
+            event.preventDefault();
+            loadContentPlaceholder(fileName, targetId, clickedElement, titleId);
+
+            // Scroll to just below the banner
+            const bannerHeight = document.querySelector('.banner').offsetHeight;
+            if (window.scrollY > bannerHeight) {
+            window.scrollTo({ top: bannerHeight, behavior: 'smooth' });
+            }
+            console.log('Content loaded + scrolled.')
+        }
+    </script>
+
+
+
+    <!-- Add default prompt text -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var startLinkElement = document.getElementById('chatgpt-start-link');
+        loadContentPlaceholder('start.txt', 'content-area', startLinkElement, 'chatgpt-prompt-title');
+    });
+    </script>
+
+    <!--
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const homestartLink = document.getElementById('home-start-link');
+            const chatgptstartLink = document.getElementById('chatgpt-start-link');
+
+            // Select the start sidebar link
+            if (chatgptstartLink) {
+                chatgptstartLink.click();
+            }
+            // Select the start sidebar link
+            if (homestartLink) {
+                homestartLink.click();
+            }
+        });
+    </script>
+    -->
+
+    <!--<script src="showSectionById.js"></script>-->
     <script src="script.js"></script>
     <script src="fetchtxt.js"></script>
+    <script src="loadContentPlaceholder.js"></script>
 </body>
 </html>
