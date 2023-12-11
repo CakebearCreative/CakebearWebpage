@@ -9,7 +9,10 @@ function loadContent(fileName, targetId, clickedElement, titleId) {
     fetch(filePath)
         .then(response => response.text())
         .then(data => {
-            document.getElementById(targetId).textContent = data;
+            // Replace newlines with <br> tags
+            const formattedData = data.replace(/\n/g, '<br>');
+            document.getElementById(targetId).innerHTML = formattedData;
+            //document.getElementById(targetId).textContent = data;
             document.getElementById(titleId).textContent = clickedElement.textContent;
             // Update the active prompt styling
             updateActivePromptStyle(clickedElement);
