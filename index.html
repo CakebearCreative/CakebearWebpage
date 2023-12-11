@@ -525,7 +525,7 @@
     <script>
         function loadContentAndScroll(event, fileName, targetId, clickedElement, titleId) {
             event.preventDefault();
-            loadContentPlaceholder(fileName, targetId, clickedElement, titleId);
+            loadContent(fileName, targetId, clickedElement, titleId);
 
             // Scroll to just below the banner
             const bannerHeight = document.querySelector('.banner').offsetHeight;
@@ -542,7 +542,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
         var startLinkElement = document.getElementById('chatgpt-start-link');
-        loadContentPlaceholder('start.txt', 'content-area', startLinkElement, 'chatgpt-prompt-title');
+        loadContent('start.txt', 'content-area', startLinkElement, 'chatgpt-prompt-title');
     });
     </script>
 
@@ -567,6 +567,5 @@
     <!--<script src="showSectionById.js"></script>-->
     <script src="script.js"></script>
     <script src="fetchtxt.js"></script>
-    <script src="loadContentPlaceholder.js"></script>
 </body>
 </html>
