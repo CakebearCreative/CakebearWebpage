@@ -6,6 +6,48 @@ html, body {
     padding: 0;
 }
 
+.menu-button {
+    display: none; /* Hide by default */
+    /*position: relative; */
+    background-color: #1f1f1f;
+    position: fixed;
+    top: 210px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's above other elements */
+    transition: left 0.3s, background-color 0.3s;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.menu-button.active {
+    left: 210px;
+    top: 210px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    /* Additional styling for menu button */
+}
+
+.menu-button-guides {
+    display: none; /* Hide by default */
+    /*position: relative; */
+    background-color: #1f1f1f;
+    position: fixed;
+    top: 210px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's above other elements */
+    transition: left 0.3s, background-color 0.3s;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.menu-button-guides.active {
+    left: 210px;
+    top: 210px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    /* Additional styling for menu button */
+}
+
 body {
     background-color: #121212;
     color: #fff;
@@ -34,7 +76,29 @@ nav {
     padding: 5px 0;
     border-bottom: 2px solid;
     border-color: #25343c;
+    max-width: 1200px; /* Maximum width */
+    width: 100%; /* Full width */
 }
+
+nav.fixed {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    z-index: 999; /* High z-index to ensure it's above other elements */
+    background-color: #1c1c1c; /* Optional: background color for visibility */
+}
+
+.nav-placeholder {
+    display: none;
+}
+
+/* Handled by javascript now
+nav.fixed + .nav-placeholder {
+    display: block;
+}
+*/
 
 nav ul {
     list-style: none;
@@ -210,10 +274,12 @@ section {
     padding-bottom: 20px;
     padding-left: 0px;
     padding-right: 10px;
+    min-height: 1000px; /* FOR TROUBLESHOOTING, REMOVE IT LATER */
+    box-sizing: border-box;
 }
 
 /* Default block layout for other sections */
-#youtube, #gpts, #guides {
+#youtube, #gpts {
     display: block;
     /* ... other styles ... */
 }
@@ -242,6 +308,7 @@ section {
 
 
 #chatgpt-prompt-title {
+    margin-top: 40px;
     margin-bottom: 20px; /* Adjust as needed for vertical space */
     font-weight: bold;
 }
@@ -256,14 +323,12 @@ section {
 .sidebar {
     flex: 0 0 220px; /* Don't grow, don't shrink, start at 220px width */
     width: 220px; /* Adjust width as needed */
-    /*background-color: #2a2a2a;*/
     background-color: #1c1c1c;
     height: 80vh; /* Full viewport height */
     overflow-y: auto; /* Scrollable */
     padding: 20px;
     border-radius: 10px;
 }
-
 
 .sidebar h2 {
     text-align: left;
@@ -283,6 +348,41 @@ section {
     padding: 10px;
     border-bottom: 1px solid grey;
 }
+
+
+.sidebar-guides {
+    flex: 0 0 220px; /* Don't grow, don't shrink, start at 220px width */
+    width: 220px; /* Adjust width as needed */
+    background-color: #1c1c1c;
+    height: 80vh; /* Full viewport height */
+    overflow-y: auto; /* Scrollable */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar-guides h2 {
+    text-align: left;
+    margin-top: 8px;
+    margin-bottom: 30px;
+}
+
+.sidebar-guides ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-guides ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+}
+
+
+
+
+
 
 .main-content {
     flex-grow: 1;
@@ -396,25 +496,6 @@ section {
 }
 
 
-/*
-#homepage-intro {
-    display: flex;
-    height: 28vh;
-    overflow-y: auto;
-    padding: 10px;
-    padding-top: 0px;
-    padding-bottom: 20px;
-    padding-left: 0px;
-    padding-right: 10px;
-}
-/*
-
-/*
-.sidebar {
-    flex: 1;
-}
-*/
-
 .prompt-content {
     flex: 2; /* Adjust as needed */
     /* Additional styling */
@@ -428,19 +509,11 @@ section {
     grid-template-columns: repeat(6, 1fr);
 }
 
-/*
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-*/
 
 .gpts-home .grid-item {
     flex-basis: 30%; /* Adjust this value as needed */
     margin: 10px; /* Optional, for spacing out items */
 }
-
 
 
 /* Styles for the About section */
@@ -527,6 +600,23 @@ section {
     padding: 20px;
 }
 
+.guide-content-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+}
+
+#guide-full {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+    padding-top: 5px;
+}
+
 .homepage-content-title, .main-content-title {
     text-align: left; /* Align text to the left */
     margin-bottom: 10px; /* Space below the title */
@@ -597,15 +687,18 @@ section {
     /* Other styling as needed */
 }
 
-.sidebar a {
+.sidebar a, .sidebar-guides a {
     transition: background-color 0.1s;
 }
 
+
+/*
 .home-section .sidebar a {
     padding: 10px;
 }
+*/
 
-nav a:hover, .sidebar a:hover {
+nav a:hover, .sidebar a:hover, .sidebar-guides a:hover {
     background-color: #313131;
     color: #ffffff;
     border-radius: 10px;
@@ -740,6 +833,86 @@ img, video, iframe {
 }
 
 
+#guides {
+    display: flex;
+    flex-direction: row;
+    color: #d9d9d9;
+    margin: 0px 0px;
+    padding: 10px 0px;
+}
+
+.guide-full-container {
+    display: flex;
+    flex-direction: row;
+    color: #d9d9d9;
+    margin: 0px 0px;
+    padding: 10px 0px;
+}
+
+.guide-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Space between rows */
+    border-radius: 10px;
+    padding: 7px;
+    transition: background-color 0.2s;
+}
+.guide-row:hover {
+    background-color:#212121;
+}
+.guide-row:link {
+    text-decoration: none;
+}
+.guide-icon {
+    width: 110px; /* Adjust icon size as needed */
+    margin-left: 10px; /* Space between icon and text */
+    border-radius: 10px;
+}
+.guide-info {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+}
+.guide-title {
+    font-weight: bold;
+    color: #d6d6d6; /* Title color */
+    /* Other styles for the title */
+}
+.guide-description {
+    /* Styles for the description */
+    margin: 12px 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #adadad;
+}
+.guide-author-date {
+    color: #6a70a4;
+    margin: 0px 0px;
+    font-size: 15px;
+}
+
+.guide-main-img img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    border-color: #0e2338;
+    border-width: 5px;
+    border-style:solid;
+}
+
+
+
+/*
+#guide-full {
+    display: block;
+    color:#d9d9d9;
+    margin: 10px;
+    padding: 20px 120px;
+}
+*/
+
 @media screen and (max-width: 1024px) {
 
     
@@ -748,17 +921,30 @@ img, video, iframe {
     padding-left: 16px;
     padding-right: 16px;
     }
-
     .sidebar h2 {
         text-align: center;
     }
-
     .sidebar a {
         padding-left: 5px;
         padding-right: 5px;
     }
-
     .sidebar .generic-link {
+        text-align: center;
+    }
+
+    .sidebar-guides {
+        flex: 0 0 180px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .sidebar-guides h2 {
+        text-align: center;
+    }
+    .sidebar-guides a {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .sidebar-guides .generic-link {
         text-align: center;
     }
 
@@ -839,16 +1025,44 @@ img, video, iframe {
     }
 
     .sidebar {
-        flex: 0 0 150px;  /*Don't grow, don't shrink, start at 250px width */
+        position: fixed;
+        left: -200px;
+        width: 200px;
+        height: 100%;
+        /*flex: 0 0 150px; */
         padding-left: 0px;
         padding-right: 0px;
+        overflow-y: auto;
+        transition: left 0.3s;
     }
-
+    .sidebar.active {
+        left: 0;
+    }
     .sidebar h2 {
         text-align: center;
     }
-
     .sidebar .generic-link {
+        text-align: center;
+    }
+
+    .sidebar-guides {
+        position: fixed;
+        left: -200px;
+        width: 200px;
+        height: 100%;
+        /*flex: 0 0 150px; */
+        padding-left: 0px;
+        padding-right: 0px;
+        overflow-y: auto;
+        transition: left 0.3s;
+    }
+    .sidebar-guides.active {
+        left: 0;
+    }
+    .sidebar-guides h2 {
+        text-align: center;
+    }
+    .sidebar-guides .generic-link {
         text-align: center;
     }
 
@@ -890,6 +1104,34 @@ img, video, iframe {
     .container-chatgpt-title-content {
         padding: 14px;
         padding-top: 20px; 
+        transition: margin-left 0.3s; /* Smooth transition */
+    }
+
+    .guide-content-container {
+        padding: 14px;
+        padding-top: 20px; 
+        transition: margin-left 0.3s; /* Smooth transition */
+        overflow-x: hidden;
+    }
+
+
+    #guide-full {
+        padding: 14px;
+        padding-top: 20px; 
+        transition: margin-left 0.3s; /* Smooth transition */
+        overflow-x: hidden;
+    }
+
+    .container-chatgpt-title-content.menu-active {
+        margin-left: 210px; /* Adjust to match the sidebar width */
+    }
+
+    #guide-full.menu-active {
+        margin-left: 210px; /* Adjust to match the sidebar width */
+    }
+
+    .guide-content-container.menu-active {
+        margin-left: 210px; /* Adjust to match the sidebar width */
     }
 
     .container-homepage-title-content {
@@ -900,6 +1142,20 @@ img, video, iframe {
     .homepage-container h3 {
         margin-top: 0px;
     }
+
+    .menu-button {
+        display: block; /* Show menu button */
+        /* Additional styling for menu button */
+    }
+
+    .menu-button-guides {
+        display: block; /* Show menu button */
+        /* Additional styling for menu button */
+    }
+
+
+
+
 
     /* Other responsive adjustments */
 }
